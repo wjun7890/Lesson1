@@ -62,5 +62,3 @@ server <- function(input, output) {
     
 }
 shinyApp(ui, server)
-
-runGitHub( "zh5101", "wjun7890")
