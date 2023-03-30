@@ -183,6 +183,8 @@ ui <- fluidPage(
 )
 shinyApp(ui = ui, server = server)
 
+
+
 ui <- fluidPage(
     titlePanel("My Star Wars App"),
     sidebarLayout(
@@ -485,14 +487,14 @@ server <- function(input, output) {
 shinyApp(ui, server)
 
 #####L5#####
-counties <- readRDS("census-app/data/counties.rds")
+counties <- readRDS("data/counties.rds")
 head(counties)
 install.packages(c("maps", "mapproj"))
-percent_map(counties$white, "darkgreen", "% White")
 
 library(maps)
 library(mapproj)
-source("census-app/helpers.R")
+source("helpers.R")
+percent_map(counties$white, "darkgreen", "% White")
 
 # User interface ----
 ui <- fluidPage(
@@ -670,5 +672,3 @@ server <- function(input, output) {
                     type = "line", log.scale = input$log, TA = NULL)
     })
 }
-
-
