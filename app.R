@@ -1,12 +1,4 @@
-#
-# This is a Shiny web application. You can run the application by clicking
-# the 'Run App' button above.
-#
-# Find out more about building applications with Shiny here:
-#
-#    http://shiny.rstudio.com/
-#
-install.package("shiny")
+install.packages("shiny")
 library(shiny)
 # Define UI for app that draws a histogram ----
 ui <- fluidPage(
@@ -122,5 +114,6 @@ server <- function(input, output) {
 }
 
 shinyApp(ui, server)
+
 
 runGitHub("Lesson1", "wjun7890")
