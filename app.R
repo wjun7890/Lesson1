@@ -487,8 +487,10 @@ server <- function(input, output) {
 shinyApp(ui, server)
 
 #####L5#####
-counties <- readRDS("counties.rds")
+counties <- readRDS("data/counties.rds")
 head(counties)
+install.packages(c("maps", "mapproj"))
+
 library(maps)
 library(mapproj)
 source("helpers.R")
@@ -534,7 +536,7 @@ library(maps)
 library(mapproj)
 
 # Load data ----
-counties <- readRDS("counties.rds")
+counties <- readRDS("data/counties.rds")
 
 # Source helper functions -----
 source("helpers.R")
@@ -670,3 +672,4 @@ server <- function(input, output) {
                     type = "line", log.scale = input$log, TA = NULL)
     })
 }
+
